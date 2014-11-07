@@ -1,0 +1,26 @@
+// ==========================================================================
+// Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google          : "http://fonts.googleapis.com/css?family=Lato:300,400,700";
+$font-family--primary      : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--light        : 300;
+$font-weight--normal       : 400;
+$font-weight--bold         : 700;
+
+// Descriptive Base Colors
+
+$white                     : #FFFFFF;
+$black                     : #333333;
+$gray                      : #777777;
+
+// Color Usage
+
+$color-background          : $white;
+$color-nav                 : $black;
+$background-color--nav     : $gray;

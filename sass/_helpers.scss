@@ -1,0 +1,54 @@
+// ==========================================================================
+// Helpers
+// ==========================================================================
+
+@mixin prefix($attribute, $value) {
+  -webkit-#{$attribute}: #{$value};
+  -ms-#{$attribute}: #{$value};
+  -moz-#{$attribute}: #{$value};
+  -o-#{$attribute}: #{$value};
+  #{$attribute}: #{$value};
+}
+
+@mixin box-shadow($amount) {
+	-webkit-box-shadow: #{$amount};
+	-moz-box-shadow:    #{$amount};
+	box-shadow:         #{$amount};
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin animation-delay($value) {
+  -webkit-animation-delay: $value;
+  -moz-animation-delay: $value;
+  -o-animation-delay: $value;
+  animation-delay: $value;
+}
+
+@mixin placeholder{
+  ::-webkit-input-placeholder { @content }
+  ::-moz-placeholder { @content } // FF 19+
+  :-moz-placeholder { @content } // FF 18-
+  :-ms-input-placeholder { @content } //IE 10+
+  .placeholder { @content } // for polyfill
+}

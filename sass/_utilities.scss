@@ -1,0 +1,19 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+
+/**
+Theme Name: squid
+Author: Joseph Fusco
+Author URI: http://github.com/joefusco
+Description: A custom tailored WordPress theme built with love. Based off http://underscores.me/
+Version: 1.1
+*/
+
+@if variable-exists(font-url--google) {
+	@import url($font-url--google);
+}
+
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}

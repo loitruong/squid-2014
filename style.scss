@@ -1,0 +1,13 @@
+// ==========================================================================
+// Styles
+// ==========================================================================
+
+@import "sass/config";
+@import "sass/helpers";
+@import "sass/utilities";
+@import "sass/reset";
+// bootstrap CDN is active in functions.php for development
+//@import "sass/bootstrap";
+@import "sass/wysiwyg";
+@import "sass/base";
+@import "sass/main";
