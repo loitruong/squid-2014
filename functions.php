@@ -315,3 +315,14 @@ function remove_menus(){
   
 }
 add_action( 'admin_menu', 'remove_menus' );
+
+function remove_footer_admin () {
+	echo 'Squid by <a href="http://github.com/joefusco" taget="_blank">Joseph Fusco</a>, and powered by WordPress';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+function annointed_admin_bar_remove() {
+        global $wp_admin_bar;
+        $wp_admin_bar->remove_menu('wp-logo');
+}
+add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
