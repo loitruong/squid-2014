@@ -1,4 +1,4 @@
-# _squid
+# squid
 
 >Modular SASS meets WordPress
 
