@@ -21,8 +21,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-ie.css" />
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 <![endif]-->
-
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
+<![endif]-->
 
 </head>
 
