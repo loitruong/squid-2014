@@ -17,3 +17,70 @@ Version: 1.1
 @function em($target, $context: $base__font-size) {
 	@return ($target / $context) * 1em;
 }
+
+@mixin mq($size, $method: nmf) {
+  
+  // ==================================================================
+  // Mobile First Method
+  // ==================================================================
+  
+  @if $method == mf {
+    @if $size == xxs {
+      // Custom, iPhone Retina
+      @media only screen and (min-width : $break--tiny)           { @content; }
+    }
+    @else if $size == xs {
+      // Extra Small Devices, Phones 
+      @media only screen and (min-width : $break--extra-small)    { @content; }
+    }
+    @else if $size == sm {
+      // Small Devices, Tablets
+      @media only screen and (min-width : $break--small)          { @content; }
+    }
+    @else if $size == md {
+      // Medium Devices, Desktops
+      @media only screen and (min-width : $break--medium)         { @content; }
+    }
+    @else if $size == lg {
+      // Large Devices, Wide Screens
+      @media only screen and (min-width : $break--large)          { @content; }
+    }
+    @else {
+      @error "#{$size} is not a valid size for the mobile first method!";
+    }
+  }
+  
+  // ==================================================================
+  // Non-Mobile First Method
+  // ==================================================================
+  
+  @else if $method == nmf {
+    @if $size == lg {
+      // Large Devices, Wide Screens
+      @media only screen and (max-width : $break--large - 1)       { @content; }
+    }
+    @else if $size == md {
+      // Medium Devices, Desktops
+      @media only screen and (max-width : $break--medium - 1 )       { @content; }
+    }
+    @else if $size == sm {
+      // Small Devices, Tablets
+      @media only screen and (max-width : $break--small - 1)       { @content; }
+    }
+    @else if $size == xs {
+      // Extra Small Devices, Phones
+      @media only screen and (max-width : $break--extra-small - 1) { @content; }
+    }
+    @else if $size == xxs {
+      // Custom, iPhone Retina
+      @media only screen and (max-width : $break--tiny - 1)        { @content; }
+    }
+    @else {
+      @error "#{$size} is not a valid size for the non-mobile first method!";
+    }
+  }
+  
+  @else {
+    @error "#{$method} is not a valid method. Use [mf] or [nmf] for mobile and non-mobile first.";
+  }
+}
