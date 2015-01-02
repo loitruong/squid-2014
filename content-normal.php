@@ -1,7 +1,9 @@
 <?php
 /*
+ * 
  * Template Name: Page - Normal
- */
+ * 
+*/
 get_header(); ?>
 
 <?php while (have_posts()) : the_post(); ?>
