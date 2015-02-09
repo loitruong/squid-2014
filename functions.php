@@ -11,6 +11,11 @@ function squid_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'squid_scripts' );
 
+add_action('get_header', 'remove_adminbar_pushdown');
+function remove_adminbar_pushdown() {  
+    remove_action('wp_head', '_admin_bar_bump_cb');  
+}
+
 //define('FS_METHOD', 'direct');
 
 if (!isset($content_width)) $content_width = 770;
