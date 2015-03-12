@@ -2,6 +2,13 @@
 // Helpers
 // ==========================================================================
 
+@mixin doubly($margin) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
+
 @mixin prefix($attribute, $value) {
   -webkit-#{$attribute}: #{$value};
   -ms-#{$attribute}: #{$value};
