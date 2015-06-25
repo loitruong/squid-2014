@@ -12,3 +12,13 @@ $font-family--primary      : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-se
 $font-weight--light        : 300;
 $font-weight--normal       : 400;
 $font-weight--bold         : 700;
+
+
+// responsive
+$phone: "max-width: 450px";
+$half-sm: "max-width: 550px";
+$sm: "max-width: 767px";
+$md: "max-width: 991px";
+$lg: "max-width: 1199px";
+$xlg: "max-width: 1299px";
+$xxlg: "max-width: 1499px";
